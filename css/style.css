@@ -1,0 +1,266 @@
+/* Divv*/
+ :root {
+     --amarelo: rgb(254,209,54);
+     --branco: rgb(255,255,255);
+     --preto: rgb(0,0,0);
+     --cinza: rgb(119,119,119);
+     --cinza-claro: rgb(245,245,245);
+     --amarelo-escuro: rgb(230,179,1);
+ }
+
+ {
+
+  -webkit-box-sizing:   border-box;   /* chrome / safari */
+  -moz-box-sizing: border-box;    /*  firefox */
+  -ms-box-sizing: border-box;  /* IE 8 */
+  -o-box-sizing: border-box;     /* Opera */
+  box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;  /* a imagem nunca mais ira ultrapassar o tamnho da tela */
+}
+
+header {
+    background-image: url('../images/bg-header.jpg'); 
+    /* height: 1200px; */
+    background-repeat: no-repeat;
+    background-position: top;
+   /*text-align: center;*/
+    color: #FFF;
+}
+
+/*  font-family: 'Open Sans', sans-serif;
+    font-family: 'Droid Serif', serif;       */
+   
+header span,
+header h1 {
+    display: block;
+    text-align: center;
+}
+
+header span {
+    font-family: 'Droid Serif', Times, 'Times New Roman', serif; 
+    font-style: italic;
+    /*  font-size: 33px;  */
+    /* 33/16 */
+   /*  font-size: 2.0625em; */
+}
+header h1 {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    /* font-size: 66px; */
+    /*  font-size: 16px; */
+    /* 66/16     tamanho/contexto   web design responsivel */
+    /*  em - utilizar para fontes   e  % para bloco*/
+  /*  font-size: 4.125em; */  /* medida relativa */
+    text-transform: uppercase;
+}
+
+nav a {
+    /*  color: #FFF; */
+    color: var(--banco);
+    text-decoration: none; /* retira o sublinhado*/
+    text-transform: uppercase; /* transforma em letra maiscula*/
+}
+/* Hover - quando passamos o cursor em cima do link */
+nav a:hover {
+    color: var(--amarelo);
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+h2, h3 {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+h2 {
+   /* font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-align: center;  */
+    text-transform: uppercase;
+    /* color: rgb(254,209,54) */
+    color: var(--amarelo); 
+}
+h3 {
+   /* font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-align: center; */
+    /* color: rgb(254,209,54) */
+    color: var(--preto); 
+}
+
+p {
+    color: var(--cinza); 
+}
+
+
+nav {
+    position: relative;
+   /* display: flex;
+    flex-direction: row-reverse; /* mobile- pode rolar o menu para a direira */
+}
+
+/* @media (min-width: 900px) {
+    nav { flex-direction: row; }
+} */
+
+.workers {
+    background-color: var(--cinza-claro);
+}
+
+
+.worker {
+  /*  width: 80%; */
+    
+}
+
+.app-icon {
+   text-align: center;
+      
+  }
+  
+.worker img {
+    border: 8px solid var(--branco);
+    border-radius: 80%;  
+}
+
+.formulario {
+    background-image: url('../images/bg-footer.jpg');
+    /* height: 1200px; */
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 600px;
+   /*text-align: center;*/
+    color: #FFF;
+}
+
+input [type="text"],
+input [type="email"], 
+select,
+textarea  { 
+    width: 300px;
+}
+
+.bloco {
+    display: inline-block;
+    vertical-align: top; 
+    width: 48%;
+ } 
+
+.logo { 
+  /*  flex-grow: 2;  */
+    text-align: center;
+}
+
+.logo img {
+    width: 185px;
+} 
+
+.menu {
+    /* text-align: right; */
+    align-self: flex-end; 
+    /* modo antigo ---   line-height:  49px; */
+  /*  flex-grow: 1; */
+   /*  position: absolute;
+    left: -200%; */
+}
+.menu li {
+    display: inline;
+    padding-right: 0.625em;  /* 10px /16px*/
+    padding-left: 0.625em;
+    font-family: 'Open Sans', Arial, Helvetica, Arial, sans-serif ;
+}
+
+.button {
+    display: block;
+    text-align: center;
+   /* margin: 0.625em 0; */
+    margin-top:  calc(0.625em * 2);   /* ou margin-top: 1.250em   */
+
+    padding: 1em  1.250em;
+    margin-bottom:  calc(0.625em * 2);
+    border-radius: 7px;
+    color: var(--branco);
+    background-color: var(--amarelo);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.125em;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    transition: background-color 0.4s ease-in-out 0s;
+    /* trasicao:  propriedade   duracao  tipo  inicio  */
+}
+
+.button:hover{
+    background-color: var(--amarelo-escuro);
+}
+
+@media (max-width: 375px)  {
+    header {
+        background-size: cover;
+        height: 100%;
+        padding: 0.625em 0;
+    }
+    header span {
+        display: block;
+        padding: 0.625em;
+        font-size: 2.0625em; 
+        text-align: center;
+    }
+    header h1 {
+        font-size: 3.125em;  
+    }
+    .logo {
+        margin-bottom: 0.625em;
+    }
+    .menu {
+        text-align: center;
+    }
+}
+
+/* section { outline: nedium solid blue; }
+   article { outline: medium dotted green; }
+*/
+
+
+/* id - So pode conter 1 Id por pagina;   ou varios Id  por panina com nome unico  
+        #nome { 
+            propriedade: valor;  }
+*/
+/* Class  - Classe  (reaproveitamento 
+        .nome  {
+            propriedade: valor;
+        }    
+*/
+
+ /* img { 
+    width: 185px;
+    display: inline-block;
+    outline: thin solid darkblue; 
+
+} */
+/* ul{
+    outline: thin solid tomato;
+    display: inline-block;
+    vertical-align: top; 
+    margin-top: 0;
+    margin-right: 0; 
+    margin-bottom: 0;
+    margin-left: 300px;
+
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}  */
+
+/* li{
+    display: inline;
+    padding-right: 10px;
+    padding-left: 10px;
+}  */
